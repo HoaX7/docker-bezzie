@@ -1,50 +1,54 @@
 version: "3.3"
 # uncomment the commented lines to build from the docker files
 services:
-    api:
-        image: hoax7/docker_api
-        # build:
-        #     context: ./
-        #     dockerfile: ./api/Dockerfile
+    poc:
+        image: hoax7/docker_poc1
         ports:
-            - 5001:5001
+            - 3000:3000
+    # api:
+    #     image: hoax7/docker_api
+    #     # build:
+    #     #     context: ./
+    #     #     dockerfile: ./api/Dockerfile
+    #     ports:
+    #         - 5001:5001
 
-    user:
-        image: hoax7/docker_user
-        # build:
-        #     context: ./
-        #     dockerfile: ./user/Dockerfile
-        ports:
-            - 5002:5002
+    # user:
+    #     image: hoax7/docker_user
+    #     # build:
+    #     #     context: ./
+    #     #     dockerfile: ./user/Dockerfile
+    #     ports:
+    #         - 5002:5002
             
-    conversation:
-        image: hoax7/docker_conversation
-        # build:
-        #     context: ./
-        #     dockerfile: ./conversation/Dockerfile
-        ports:
-            - 5003:5003
+    # conversation:
+    #     image: hoax7/docker_conversation
+    #     # build:
+    #     #     context: ./
+    #     #     dockerfile: ./conversation/Dockerfile
+    #     ports:
+    #         - 5003:5003
 
-    dashboard:
-        image: hoax7/docker_dashboard
-        # build:
-        #     context: ./
-        #     dockerfile: ./dashboard/Dockerfile
-        ports:
-            - 5000:5000
-        depends_on:
-            - api
-            - user
-            - conversation
+    # dashboard:
+    #     image: hoax7/docker_dashboard
+    #     # build:
+    #     #     context: ./
+    #     #     dockerfile: ./dashboard/Dockerfile
+    #     ports:
+    #         - 5000:5000
+    #     depends_on:
+    #         - api
+    #         - user
+    #         - conversation
             
-    bezziebot:
-        image: hoax7/docker_bezziebot
-        # build:
-        #     context: ./
-        #     dockerfile: ./bezzieBot/Dockerfile
-        ports:
-            - 5004:5004
-        depends_on:
-            - api
-            - user
-            - conversation
+    # bezziebot:
+    #     image: hoax7/docker_bezziebot
+    #     # build:
+    #     #     context: ./
+    #     #     dockerfile: ./bezzieBot/Dockerfile
+    #     ports:
+    #         - 5004:5004
+    #     depends_on:
+    #         - api
+    #         - user
+    #         - conversation
