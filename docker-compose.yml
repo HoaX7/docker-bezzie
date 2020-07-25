@@ -2,7 +2,7 @@ version: "3.3"
 # uncomment the commented lines to build from the docker files
 services:
   poc:
-    image: hoax7/docker_poc1
+    image: hoax7/test
     ports:
       - 3000:3000
   # api:
